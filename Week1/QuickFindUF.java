@@ -1,3 +1,4 @@
+package Week1;
 // Quick-find - one connected componenet is represented by one id
 // intialise - intialise an array 
 //           - set the value of each element to be the index of the array

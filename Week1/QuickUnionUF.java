@@ -1,3 +1,4 @@
+package Week1;
 // QuickUnionUF - id[i] is the parent of i
 // intialise - intialise an array 
 //           - set the value of each element to be the index of the array
