@@ -1,0 +1,31 @@
+// Path Compression Quick Union - while finding the rooot of a node, set the parent of all examined node as the root
+// Data Structure - same as quick union but mainatin an extr array sz[i] which counts the number of objects in the tree at root i
+package Week1;
+
+public class QuickUnionPathCompression {
+    private int[] id;
+    public QuickUnionPathCompression(int n){
+        id = new int[n];
+        for(int i : id) {
+            id[i] = i;
+        }
+    }
+    private int root(int p) {
+        int i = id[p];
+        while(i != id[i]) {
+            id[i] = id[id[i]]; // make every node point to it's grandparent
+            i = id[i];
+        }
+        return i;
+    }
+
+    public void union (int p, int q) {
+        int p_root = root(p);
+        int q_root = root(q);
+        id[p_root] = q_root;
+    }
+    public boolean connected(int p, int q) {
+        return root(p) == root(q);
+    }
+    
+}
