@@ -22,9 +22,4 @@ public class StackLinkedList<Item> {
     public boolean isEmpty() {
         return top == null;
     }
-
-
-
-    
-    
 }

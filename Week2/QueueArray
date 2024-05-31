@@ -1,0 +1,25 @@
+package Week2;
+// Impelementation of circular array
+
+public class QueueLinkedList<Item> {
+    Node front = null;
+    Node back = null;
+    
+    public void push(Item item){
+        Node newNode = new Node();
+        newNode.item = item;
+        back.nect = newNode;
+        back = newNode;
+    }
+    public Item pop(){
+        if(front == null) {
+            return;
+        }
+       Item frontItem = front.item;
+       front = front.next;
+       return frontItem;
+    }
+    public boolean isEmpty() {
+        return front == null;
+    }
+}
