@@ -1,6 +1,6 @@
-// Inavariant  - The array to the left of the current pointer is sorted.
-//             - No element to the right of the pointer is smaller than any element to the left
-//             - find the minimum element in the right and exchange it
+// Invariant  - The array to the left of the current pointer is sorted.
+//            - No element to the right of the pointer is smaller than any element to the left
+//            - find the minimum element in the right and exchange it
 
 public class SelectionSort {
     public static void sort(Comparable[] a) {
